@@ -1,0 +1,7 @@
+config_example.menu_settings:
+  title: 'Config Settings Form'
+  route_name: config_example.settings
+  description: 'Shows menu link in the configuration section'
+  parent: system.admin_config_system
+  weight: 99
+

@@ -1,0 +1,8 @@
+name: 'Config Example'
+type: module
+description: 'This module is used to create sample form which stores data in config table.'
+package : Custom
+core: 8.x
+
+configure: config_example.settings
+

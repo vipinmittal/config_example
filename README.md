@@ -1,37 +1,28 @@
-## Welcome to GitHub Pages
+## Config Form - Drupal 8
 
-You can use the [editor on GitHub](https://github.com/vipinmittal/config_example/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+This module uis designed using Drupal form API to provide a sample form which stores data in config table
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Follow the Steps sequentially to install the module
+1. Go to <domain.com>/admin/modules
+2. install "Config Example" module.
+3. Go to /admin/config/form/settings to set the values of the form
 
-### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+If you would like to add more fields in the form, You have to make changes in one file SettingsForm.php under two functions buildForm and submitForm, rest the module will take care.
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
+config_example.settings.yml resided t /config/install takes care of default value that prepoulated after module install and thorugh form you can make changes.
 
-- Bulleted
-- List
+If you don't want any prepoluted data in the field then delete entire config folder from the module.
 
-1. Numbered
-2. List
+You can get the field value anywhere in the project by following code:
 
-**Bold** and _Italic_ and `Code` text
+  **Get Field 1 value:**
+ ```\Drupal::config('config_example.settings')->get('field1');```
+ 
+ **Get Field 2 value:**
+ ```\Drupal::config('config_example.settings')->get('field2');```
 
-[Link](url) and ![Image](src)
-```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/vipinmittal/config_example/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+**NOTE:** If downloading module rename the folder from config_example_master to config_example
