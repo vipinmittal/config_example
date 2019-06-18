@@ -1,6 +1,6 @@
 ## Config Form - Drupal 8
 
-This module uis designed using Drupal form API to provide a sample form which stores data in config table
+This module is designed using Drupal form API to provide a sample form which stores data in config table
 
 Follow the Steps sequentially to install the module
 1. Go to <domain.com>/admin/modules
